@@ -1,0 +1,1456 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../developer-guide/sdk-resources/">
+      
+      
+        <link rel="next" href="../roadmap/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+    
+    
+      
+        <title>Developer Guide - IVCAP - Platform for Collaborating on Analytics & Data</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#developer-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IVCAP - Platform for Collaborating on Analytics &amp; Data" class="md-header__button md-logo" aria-label="IVCAP - Platform for Collaborating on Analytics & Data" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IVCAP - Platform for Collaborating on Analytics & Data
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Developer Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick-start/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../developer-guide/" class="md-tabs__link">
+        Service Developer Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Operator Manual
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../roadmap/" class="md-tabs__link">
+      Roadmap
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IVCAP - Platform for Collaborating on Analytics &amp; Data" class="md-nav__button md-logo" aria-label="IVCAP - Platform for Collaborating on Analytics & Data" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    IVCAP - Platform for Collaborating on Analytics & Data
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Service Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Service Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/architecture/" class="md-nav__link">
+        Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/develop-services/" class="md-nav__link">
+        Develop Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/deploy-services/" class="md-nav__link">
+        Deploy Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/running-locally/" class="md-nav__link">
+        Running Locally
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/integration-options/" class="md-nav__link">
+        Integration options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/sdk/" class="md-nav__link">
+        Python SDK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/sdk-resources/" class="md-nav__link">
+        SDK resources and methods
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Operator Manual
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operator Manual
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Developer Guide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intended-audience" class="md-nav__link">
+    Intended audience
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-applications-services" class="md-nav__link">
+    External applications &amp; services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-services" class="md-nav__link">
+    Internal services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provision-infrastructure" class="md-nav__link">
+    Provision Infrastructure
+  </a>
+  
+    <nav class="md-nav" aria-label="Provision Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-terraform-in-csiro-azure-environment" class="md-nav__link">
+    Use Terraform in CSIRO Azure environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-configuration-files" class="md-nav__link">
+    Key configuration files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-terraform-to-setup-the-cluster" class="md-nav__link">
+    Use Terraform to setup the cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cluster-setup-script" class="md-nav__link">
+    The cluster-setup script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terraform-on-non-azure-platform" class="md-nav__link">
+    Terraform on Non-Azure platform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets-and-the-sensitive-flag" class="md-nav__link">
+    Secrets and the sensitive flag 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-and-services" class="md-nav__link">
+    Applications and Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-considerations" class="md-nav__link">
+    Platform specific considerations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-new-releases-and-upgrades" class="md-nav__link">
+    Installing new releases and upgrades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+    <nav class="md-nav" aria-label="Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorisation" class="md-nav__link">
+    Authorisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis" class="md-nav__link">
+    APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption" class="md-nav__link">
+    Encryption
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-time-configuration" class="md-nav__link">
+    Run-time configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-containers" class="md-nav__link">
+    Publishing containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services-considerations" class="md-nav__link">
+    External services considerations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-services-considerations" class="md-nav__link">
+    Internal services considerations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bespoke-services-and-workflow-considerations" class="md-nav__link">
+    Bespoke services and workflow considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intended-audience" class="md-nav__link">
+    Intended audience
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-applications-services" class="md-nav__link">
+    External applications &amp; services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-services" class="md-nav__link">
+    Internal services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provision-infrastructure" class="md-nav__link">
+    Provision Infrastructure
+  </a>
+  
+    <nav class="md-nav" aria-label="Provision Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-terraform-in-csiro-azure-environment" class="md-nav__link">
+    Use Terraform in CSIRO Azure environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-configuration-files" class="md-nav__link">
+    Key configuration files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-terraform-to-setup-the-cluster" class="md-nav__link">
+    Use Terraform to setup the cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cluster-setup-script" class="md-nav__link">
+    The cluster-setup script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terraform-on-non-azure-platform" class="md-nav__link">
+    Terraform on Non-Azure platform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets-and-the-sensitive-flag" class="md-nav__link">
+    Secrets and the sensitive flag 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-and-services" class="md-nav__link">
+    Applications and Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-considerations" class="md-nav__link">
+    Platform specific considerations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-new-releases-and-upgrades" class="md-nav__link">
+    Installing new releases and upgrades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+    <nav class="md-nav" aria-label="Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorisation" class="md-nav__link">
+    Authorisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis" class="md-nav__link">
+    APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption" class="md-nav__link">
+    Encryption
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-time-configuration" class="md-nav__link">
+    Run-time configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-containers" class="md-nav__link">
+    Publishing containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services-considerations" class="md-nav__link">
+    External services considerations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-services-considerations" class="md-nav__link">
+    Internal services considerations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bespoke-services-and-workflow-considerations" class="md-nav__link">
+    Bespoke services and workflow considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+<h1 id="developer-guide">Developer Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>The Intelligent Visual Collaboration Analytics Platform <strong>IVCAP</strong> operates as a Software as a Service that enables researchers and analytics providers to use and implement services to collect, process, or analyse visual datasets.</p>
+<p>IVCAP is a complex software systems using a microservices architecture that enables flexibility, portability, component re-use, and service providers to add custom bespoke services tailored for their specific user needs.
+The configuration management is captured and managed in the <a href="https://github.com/reinventingscience/ivcap-core">IVCAP-core</a> Repo along with the code.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>The intended audience for this guide are the Systems Engineers and Admin staff who provision cloud services and will deploy, support, and maintain the <strong>IVCAP</strong> systems.</p>
+<h2 id="architecture">Architecture</h2>
+<p>IVCAP uses cloud infrastructure such as Azure, Amazon Web Services (AWS) to host its constituent services and software components.<br />
+<a href="https://www.terraform.io/">Terraform</a> is used to provision and manage the infrastructure.</p>
+<h3 id="external-applications-services">External applications &amp; services</h3>
+<p>Core External services and components include:
+* <a href="https://kubernetes.io/">Kubernetes</a> to containerise and deploy discrete services that provide analytics on IVCAP.  Use <a href="https://minikube.sigs.k8s.io/docs/start/">Minikube</a> for a local install.
+* <a href="https://magda.io/">Magda</a> to hold, catalogue and manage the IVCAP data and meta-data.
+* <a href="https://argoproj.github.io/argo-workflows/">Argo Workflows</a> for sequencing analytics activities (tasks, parts of workflows, etc.) in workflow templates that provide the service.  Argo is used to execute all orders.
+* <a href="https://min.io/">Minio</a> for object and data storage.
+* <a href="">Postgres</a> that acts as an underlying database.
+* <a href="">Mitterwald</a> to share authorisation tokens and secrets between services.
+* <a href="https://github.com/grafana/loki">Loki</a> a monitoring and logging stack for storing logs and processing queries
+  * <a href="">Promtail</a> for gathering and sending logs to Loki
+  * <a href="https://grafana.com/docs/loki/latest/api/">Grafana</a> an endpoint for querying and displaying logs</p>
+<h3 id="internal-services">Internal services</h3>
+<p>The internal services are built with the IVCAP deployment and include:
+* Api_gateway: acts as the REST API endpoint, authorises requests, and directs requests to the appropriate service.
+* Order_dispatcher: actions order requests and initiate service workflows.<br />
+* Data_proxy: Provides access to, caching, and related logging of artifacts for services.
+* Exit_handler: Reports the exit state of orders to update the order records in Magda. </p>
+<h2 id="installation">Installation</h2>
+<p>Detailed Installation steps for IVCAP deployment on Azure is found at <a href="https://github.com/reinventingscience/ivcap-core/tree/develop/deploy">ivcap-core/deploy/</a>, which includes the steps for deploying to minikube.</p>
+<ol>
+<li>Provision infrastructure using Terraform</li>
+<li>Create a new cluster</li>
+<li>Access the cluster</li>
+<li>Install the Kubernetes?  CHECK!</li>
+<li>Install IVCAP into the K8s environment</li>
+<li>Start using the services</li>
+</ol>
+<h3 id="provision-infrastructure">Provision Infrastructure</h3>
+<p><a href="https://developer.hashicorp.com/terraform/tutorials/kubernetes">Provision infrastructure and deploy a kubernetes cluster</a> in your cloud subscription.
+Use the <a href="https://developer.hashicorp.com/terraform/language">terraform language</a> configuration files to provision the platform and install core software components.</p>
+<p>Check the values and settings in the configuration files (Makefiles, yaml, and shell scripts) found in the <code>/deploy</code> sub-folders so they work for your environment.</p>
+<h4 id="use-terraform-in-csiro-azure-environment">Use Terraform in CSIRO Azure environment</h4>
+<p>Follow the <a href="https://github.com/reinventingscience/ivcap-core/blob/develop/deploy/aks/DEPLOY.md">deploy a new cluster using Terraform Enterprise</a> procedure to deploy (create the terraform workspace, create the cluster, and accesses the cluster) with <a href="https://terraform.csiro.cloud/">https://terraform.csiro.cloud/</a>.</p>
+<p>A quick overview of the procedure highlights:
+* Create a version controlled workspace
+* Integrate with your DevOps version control repository (repo and terraform working directories)
+* Configure the Terraform Variables and authentication secrets/passwords (may also be set in a terraform.tfvars file)
+* Set the Environment Variables that validate the workspace as being a valid member of your cloud
+* Create the cluster / initial deployment
+* Use kubectl to Access the Cluster </p>
+<p>Deploy a cluster, and the initial kubernetes environment using the makefile targets</p>
+<h4 id="key-configuration-files">Key configuration files</h4>
+<p>Review terraform resources, modules and variables definition files that are in the <code>/deploy/aks/deploy/terraform/</code> directory.</p>
+<table>
+<thead>
+<tr>
+<th>application</th>
+<th>file</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>terraform</td>
+<td><code>versions.tf</code></td>
+<td>Terraform and required providers defined</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>main.tf</code></td>
+<td>The main terraform script with the initial data, provider, and module resource definitions for provisioning and creating the environment</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>variables.tf</code></td>
+<td>Terraform variable and object definitions (a .tf.json file is not used)</td>
+</tr>
+<tr>
+<td>???</td>
+<td><code>tfe-backend.hcl</code></td>
+<td>the hcl file used to define the cloud resource</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>cluster-resources/aks.tf</code></td>
+<td>Containing the primary Azure Kubernetes service data and resource settings</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>cluster-resources/datalake.tf</code></td>
+<td>Azure data storage and virtual network resource settings for the provisioning</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>cluster-resources/outputs.tf</code></td>
+<td>Output definitions for the terraform provisioning.  Note: <a href="#secrets-and-the-sensitive-flag">Use the sensitive flag</a> to avoid the inadvertent sharing of secrets, usernames, or passwords</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>cluster-resources/rg.tf</code></td>
+<td>Resource group definitions for the provisioning</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>cluster-resources/variables.tf</code></td>
+<td>Cluster resource variable definitions</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>cluster-setup/main.tf</code></td>
+<td>The cluster setup using helm to install and configure the software services used in the IVCAP environment</td>
+</tr>
+<tr>
+<td>terraform</td>
+<td><code>cluster-setup/variables.tf</code></td>
+<td>the variable definitions used during the cluster setup</td>
+</tr>
+<tr>
+<td>magda</td>
+<td><code>config/magda-config/templates/auth-secrets.yaml</code></td>
+<td><strong><em>I suspect this is one of the files no longer needed subsequent to the security review</em></strong> Contains the settings for creating the application internal communication secrets using <code>mittwald</code></td>
+</tr>
+<tr>
+<td>magda</td>
+<td><code>config/magda-config/chart.yaml</code></td>
+<td>Magda components configuration and version settings</td>
+</tr>
+<tr>
+<td>magda</td>
+<td><code>config/magda-config/values.yaml</code></td>
+<td>Key settings and values for running <em>magda</em> within your environment</td>
+</tr>
+<tr>
+<td>argo</td>
+<td><code>config/argo.yaml</code></td>
+<td>configuration used for Argo</td>
+</tr>
+<tr>
+<td>istio</td>
+<td><code>config/istio.yaml</code></td>
+<td>configuration used for istio</td>
+</tr>
+<tr>
+<td>minio</td>
+<td><code>config/minio.yaml</code></td>
+<td>configuration used for minio</td>
+</tr>
+</tbody>
+</table>
+<h4 id="use-terraform-to-setup-the-cluster">Use Terraform to setup the cluster</h4>
+<p>TODO - How the cluster-setup is triggered
+TODO - main.tf sets up the cluster</p>
+<p>Terraform sets up the cluster using the settings in the <code>cluster-setup/main.tf</code> file.  Which uses <code>helm</code> to install and do the initial configuration for:</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://bitnami-labs.github.io/sealed-secrets">sealed_secrets_controller</a></td>
+<td>sealed-secrets-controller</td>
+<td>With the namespace <code>kube-system</code></td>
+</tr>
+<tr>
+<td><a href="https://charts.jetstack.io">cert-manager</a></td>
+<td>cert-manager</td>
+<td>to TODO</td>
+</tr>
+<tr>
+<td><a href="https://helm.mittwald.de">kubernetes_replicator</a></td>
+<td>kubernetes-replicator</td>
+<td>Mittwald is used to manage the secure sharing of credentials and secrets between the constituent systems and services</td>
+</tr>
+<tr>
+<td><a href="https://argoproj.github.io/argo-helm">argo_controller</a></td>
+<td>argo</td>
+<td>Argo workflows are used to manage and execute the services.  The configuration is held in the file: <code>config/argo.yaml</code></td>
+</tr>
+<tr>
+<td><a href="https://helm.min.io">minio_controller</a></td>
+<td>argo-artifacts</td>
+<td>Minio manages the storage of artifacts used for <em>Argo</em>.  The configuration is held in the file <code>config/minio.yaml</code>.  Note: extra arguments may be set to be stored at: <code>https://${var.storage_acc_name}.blob.core.windows.net</code></td>
+</tr>
+<tr>
+<td>TODO! kube config file</td>
+<td>local.kube_config_path</td>
+<td>The path to the config file for the kube configuration</td>
+</tr>
+<tr>
+<td>Note: Provisioner</td>
+<td><code>cluster-setup.sh</code></td>
+<td>A Generic <em>local-exec</em> provisioner is used to be the primary work-horse and do the installation and configuration of the software components comprising <em>IVCAP</em></td>
+</tr>
+<tr>
+<td>magda</td>
+<td>magda</td>
+<td>using configuration files located in the <code>config/magda-config</code> directory to setup magda with the values found in the <code>config/magda-config/values.yaml</code> file</td>
+</tr>
+</tbody>
+</table>
+<p>Deploy and run the IVCAP components and services containers using kubernetes </p>
+<p><a href="https://github.com/reinventingscience/ivcap-core/tree/develop/deploy">ivcap-core/deploy/</a> discusses the installation for the K8s cluster.<br />
+Additional tools and utilities may also need to be installed if they're not already installed, which may include:
+* brews coreutils and yq, 
+* Kubectl, or kubernetes-cli, the K8s command line interface 
+* helm
+* argo</p>
+<h4 id="the-cluster-setup-script">The cluster-setup script</h4>
+<p>Install and configure the additional services automatically with the <code>cluster-setup.sh</code> script.</p>
+<p>The services installed or configured include:
+1. Install <a href="https://storage.googleapis.com/kubernetes-release/release/stable.txt">kubectl</a>
+1. Create the namespace for the "order-runner"
+1. Create the namespace for "minio"
+1. Add label to kube-system namespace
+1. Install <a href="https://github.com/bitnami-labs/sealed-secrets">sealed-secrets</a> as the <code>kubeseal</code>
+1. Install <a href="https://istio.io/">istio</a>
+1. Install the <code>config/istio.yaml</code> configuration to <em>istio</em>
+1. Deploy and configure the <em>docker</em> secret <em>Are these steps still reqiured?</em>
+1. Deploy and configure the <em>minio</em> secret 
+1. Deploy and configure the <em>storage</em> secret
+1. Deploy and configure the <em>blob</em> secret
+1. Deploy and configure the <em>ACME</em> secret
+1. Deploy the manifests.</p>
+<h4 id="terraform-on-non-azure-platform">Terraform on Non-Azure platform</h4>
+<p><a href="https://developer.hashicorp.com/terraform/cli/commands/workspace/new">Create the new Terraform Workspace</a></p>
+<p><em>TODO</em> - similar steps required?</p>
+<h4 id="secrets-and-the-sensitive-flag">Secrets and the sensitive flag <a name="secrets"></a></h4>
+<p>Note: use the <code>sensitive</code> flag when generating output scripts and variable files to avoid the accidental sharing of secrets (passwords, etc.), for example:</p>
+<pre><code>output &quot;db_username&quot; {
+  description = &quot;Database administrator username&quot;
+  value       = aws_db_instance.database.username
+  sensitive   = true
+}
+
+output &quot;db_password&quot; {
+  description = &quot;Database administrator password&quot;
+  value       = aws_db_instance.database.password
+  sensitive   = true
+}
+</code></pre>
+<h4 id="applications-and-services">Applications and Services</h4>
+<p>Check the deployment configuration for:
+1. Mitterwald
+1. Argo Workflows
+1. Postgres
+Using the make command with the makefile in the <code>/deploy</code> directory.</p>
+<p>Deploy the IVCAP services using the make command <code>make helm-upgrade-gke</code>
+Deploying to minikube has its own make target</p>
+<h3 id="platform-specific-considerations">Platform specific considerations</h3>
+<p>TODO Are there platform specific considerations?</p>
+<h3 id="installing-new-releases-and-upgrades">Installing new releases and upgrades</h3>
+<p>TODO how to approach/plan for upgrades </p>
+<h2 id="security">Security</h2>
+<h3 id="authentication">Authentication</h3>
+<p>IVCAP implements the <a href="https://oauth.net/2/">oauth2</a> authentication model.
+Authentication for the user device is currently provided via the <a href="https://github.com/reinventingscience/ivcap-cli">ivcap-cli</a> command line interface.</p>
+<p>The <a href="https://github.com/reinventingscience/ivcap-cli">cli login command</a> illustrates the oauth2 authentication flow, token management, and the refresh of the JWT token within the service using golang.
+Service providers may choose to implement the authentication and token management within their service.</p>
+<p>Update the details for the oauth provider you use for your deployment in the <code>/api-gateway/public/authinfo.yaml</code> yaml.  These details will be used for user authentication with the specified oauth provider.<br />
+While the data structure suggests multiple providers may be allowed, only the single provider is currently supported.</p>
+<h3 id="authorisation">Authorisation</h3>
+<p>Authorisation is controlled using the OPA rules set by the <code>.rego</code> files in the IVCAP-core <code>api_gateway/opa/default/</code> directory.</p>
+<p>The rules files define if the caller is allowed to call a particular service, define the results the user may see, and define the actions a user may take.</p>
+<h3 id="general">General</h3>
+<p>User activities should be logged, and those logs moved to long term-storage for interrogation when needed.</p>
+<h3 id="apis">APIs</h3>
+<h3 id="encryption">Encryption</h3>
+<h3 id="run-time-configuration">Run-time configuration</h3>
+<h3 id="publishing-containers">Publishing containers</h3>
+<p>Scan containers for security and vulnerability threats prior to publishing them to the Container registry</p>
+<h3 id="external-services-considerations">External services considerations</h3>
+<h3 id="internal-services-considerations">Internal services considerations</h3>
+<h3 id="bespoke-services-and-workflow-considerations">Bespoke services and workflow considerations</h3>
+
+
+
+
+
+                
+
+<!-- Giscus -->
+<h3 id="__comments">Comments</h2>
+
+  <script src="https://giscus.app/client.js" data-repo="reinventingscience/ivcap-docs" data-repo-id="R_kgDOIPEvzw"
+    data-category="General" data-category-id="DIC_kwDOIPEvz84CUfKW" data-mapping="pathname" data-reactions-enabled="1"
+    data-emit-metadata="0" data-input-position="bottom" data-lang="en" crossorigin="anonymous" data-loading="lazy"
+    data-theme="light" async>
+    </script>
+
+  
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../developer-guide/sdk-resources/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SDK resources and methods" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                SDK resources and methods
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../roadmap/" class="md-footer__link md-footer__link--next" aria-label="Next: Roadmap" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Roadmap
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
+</html>
